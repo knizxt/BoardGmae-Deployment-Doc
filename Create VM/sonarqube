@@ -1,4 +1,4 @@
-Create a install_docker.sh file
+ Create a install_docker.sh file
 
 ```bash
 nano install_docker.sh
