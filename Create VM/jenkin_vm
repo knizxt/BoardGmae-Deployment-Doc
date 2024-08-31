@@ -1,3 +1,5 @@
+***Do not install java below jdk 17***
+
 ## Installing Jenkins on Ubuntu
 
 Create a install_jenkin.sh file
@@ -91,3 +93,15 @@ Then, you can run the script using:
 ```bash
 ./install_docker.sh
 ```
+After running this command, Nexus will be accessible on your host machine at http://Machine-IP:8080.
+
+for unlock jenkin you will a directory use this cmd to get the key
+```bash
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+you will get the key use it to unlock jenkin
+
+you will suggestion to install plugin go with install suggested plugins
+
+now you have to create username and password and start using jenkin 
+
