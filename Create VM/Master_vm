@@ -3,7 +3,7 @@
 
 ### 1. Update System Packages
 
-```bash[On Master & Worker Node]
+```bash
 sudo apt-get update
 ```
 
@@ -52,7 +52,14 @@ sudo swapoff -a
 sudo kubeadm init --pod-network-cidr=10.244.0.0/16
 ```
 
-### 9. Configure Kubernetes Cluster
+### 9. You will get a token/key copy it and paste to worker vm to connect with master vm 
+
+```bash
+sudo swapoff -a
+```
+
+
+### 10. Configure Kubernetes Cluster
 
 ```bash
 mkdir -p $HOME/.kube
@@ -60,13 +67,13 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-### 10. Deploy Networking Solution
+### 11. Deploy Networking Solution
 
 ```bash
 kubectl apply -f https://docs.projectcalico.org/manifests/calico.yaml
 ```
 
-### 10. Deploy Ingress Controller (NGINX)
+### 12. Deploy Ingress Controller (NGINX)
 
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.49.0/deploy/static/provider/baremetal/deploy.yaml
